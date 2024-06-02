@@ -1,65 +1,85 @@
-.center-align {
-    text-align: center;
-}
+<?php include "templates/header.php"; ?>
 
-.left-align {
-    text-align: left;
-}
+<style>
+    /* Estilos adicionales para mejorar la apariencia */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+    }
 
-h1 {
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+    .center-align {
+        text-align: center;
+    }
 
-ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
+    .left-align {
+        text-align: left;
+    }
 
-ul li {
-    margin-bottom: 10px;
-}
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; /* Agregado para quitar el margen predeterminado */
+    }
 
-ul li a {
-    text-decoration: none;
-    color: white; /* Cambio de color a blanco */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #007bff; /* Azul */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+    ul li {
+        margin-bottom: 10px; /* Cambiado de margin-right a margin-bottom */
+    }
 
-ul li a:hover {
-    background-color: #0056b3; /* Azul más oscuro */
-}
+    ul li:not(:last-child) {
+        margin-right: 10px; /* Espacio entre los botones */
+    }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px auto;
-}
+    ul li a {
+        text-decoration: none;
+        color: white; /* Cambio de color a blanco */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        padding: 10px 20px;
+        background-color: #007bff; /* Azul */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
-td,
-th {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    ul li a:hover {
+        background-color: #0056b3; /* Azul más oscuro */
+    }
 
-td.no-border,
-th.no-border {
-    border: none;
-}
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    td,
+    th {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    td.no-border,
+    th.no-border {
+        border: none;
+    }
+</style>
+
+<div class="container">
+    <div class="center-align">
+        <ul>
+            <li class="left-align"><a href="read.php"><strong>Ver catálogo</strong></a></li>
+            <li class="left-align"><a href="insert.php"><strong>Agregar producto</strong></a></li>
+            <li class="left-align"><a href="update.php"><strong>Actualizar producto</strong></a></li>
+            <li class="left-align"><a href="delete.php"><strong>Remover producto</strong></a></li>
+        </ul>
+    </div>
+</div>
+
+<?php include "templates/footer.php"; ?>
