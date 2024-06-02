@@ -34,7 +34,7 @@
     li a {
         display: block;
         padding: 10px 20px;
-        background-color: #4CAF50; /* Verde */
+        background-color: #007bff; /* Azul */
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -42,7 +42,7 @@
     }
 
     li a:hover {
-        background-color: #45a049; /* Verde más oscuro */
+        background-color: #0056b3; /* Azul más oscuro */
     }
 </style>
 
