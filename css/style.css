@@ -28,18 +28,22 @@ ul {
 }
 
 ul li {
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 ul li a {
     text-decoration: none;
-    color: blueviolet;
+    color: white; /* Cambio de color a blanco */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 ul li a:hover {
-    color: #4b0082; /* Dark purple */
+    background-color: #0056b3; /* Azul más oscuro */
 }
 
 table {
