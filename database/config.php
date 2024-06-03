@@ -1,9 +1,14 @@
 <?php
+$host       = "10.0.3.4";
+$username   = "adminuser";
+$password   = "Chucha12";
+$db_name     = "products";
 
-// Configuration for database connection
+// Crear la conexión
+$conn = new mysqli($host, $username, $password, $db_name);
 
-$host       = getenv('DB_HOST');
-$username   = getenv('DB_USERNAME');
-$password   = getenv('DB_PASSWORD');
-$db_name     = getenv('DB_DATABASE');
-$sslcert    = "ssl/DigiCertGlobalRootCA.crt.pem";
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+?>
