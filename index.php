@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: login.php');
+    exit;
+}
+?>
+
 <?php include "templates/header.php"; ?>
 
 <style>
@@ -47,14 +55,17 @@
 </style>
 
 <div class="container">
-    <div class="center-align">
-        <ul>
-            <li class="left-align"><a href="read.php"><strong>Ver catálogo</strong></a></li>
-            <li class="left-align"><a href="insert.php"><strong>Agregar producto</strong></a></li>
-            <li class="left-align"><a href="update.php"><strong>Actualizar producto</strong></a></li>
-            <li class="left-align"><a href="delete.php"><strong>Remover producto</strong></a></li>
-        </ul>
-    </div>
+ 
+<div class="center-align">
+    <ul>
+        <div class="left-align">
+            <li><a href="read.php"><strong>Ver todos los productos</strong></a></li>
+            <li><a href="insert.php"><strong>Ingresar producto</strong></a></li>
+            <li><a href="update.php"><strong>Actualizar producto</strong></a></li>
+            <li><a href="delete.php"><strong>Remover producto</strong></a></li>
+            <li><a href="logout.php"><strong>Cerrar sesión</strong></a></li>
+        </div>
+    </ul>
 </div>
 
 <?php include "templates/footer.php"; ?>
